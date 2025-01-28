@@ -1,10 +1,18 @@
-"use strict"
 
-const botaoTrocarCor = document.getElementById('trocar-cor')
+const imagens = [
+    "./download (1).jfif",
+    "./download (3).jfif",
+    "./download (4).jfif",
+    "./download (5).jfif",
+    "./download (6).jfif"
+]
+ 
+function trocaImagem(){
 
-function TrocarCor () {
-    const cor = document.getElementById('cor').value
-    document.documentElement.style.setProperty('--cor-fundo', cor)
+    const imagemPrimeira = imagens.shift();
+    imagens.push(imagemPrimeira)
+
+ 
+document.body.style.backgroundImage = 'url('${imagens[0]}')';
 }
-
-botaoTrocarCor.addEventListener('click', TrocarCor)
+document.getElementById("troca-imagem").addEventListener("click", trocaImagem);

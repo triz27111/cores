@@ -11,17 +11,26 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(./download\ \(4\).jfif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: var(--cor-fundo);
     transition: background-color 1s;
+}
 
-}
-#cor{
-    padding: 8px 16px;
-    font-size: 24px;
-    outline: none;
-}
-#trocar-cor{
+#troca-imagem{
     padding: 8px 16px;
     font-size: 24px;
     cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    transition: background-color 0.3s ease; transform: 0.2s ease;
+}
+
+#troca-imagem:hover{
+    background-color: rgba(50, 50, 50, 0.9);
+    transform: scale(1.1);
 }
