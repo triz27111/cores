@@ -1,18 +1,13 @@
+"use strict"
 
-const imagens = [
-    "./download (1).jfif",
-    "./download (3).jfif",
-    "./download (4).jfif",
-    "./download (5).jfif",
-    "./download (6).jfif"
-]
- 
-function trocaImagem(){
+//const criando variavel
+// o . significa para acessar tal elemendo e () ao como chama 
+const botaoTrocarCor = document.getElementById('trocar-cor')
 
-    const imagemPrimeira = imagens.shift();
-    imagens.push(imagemPrimeira)
+//function manda o que fazer 
+function trocarCor (){
+    const cor = document.getElementById('cor') . value
+    document.documentElement.style.setProperty ('--cor-fundo', cor )
 
- 
-document.body.style.backgroundImage = 'url('${imagens[0]}')';
 }
-document.getElementById("troca-imagem").addEventListener("click", trocaImagem);
+botaoTrocarCor.addEventListener('click', trocarCor)
